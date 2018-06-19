@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Data Collecting Application</title>
+    <head>
+        <link rel="stylesheet" href="../static/main.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="container">
+            <h1>Collecting Height</h1>
+            <h3>Please fill out to get the population statistics on height</h3>
+            <div>
+                {{msg | safe}}
+            </div>
+            <form action="{{url_for('success')}}" method="POST">
+                <input title="Your email will be safe with us" placeholder="Enter your email Address" type="email" name="email_name" required>
+                <br>
+                <input title="Your data will be safe with us" placeholder="Enter your height in inches" type="number" min="12" max="144" name="height_name" required>
+                <br>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
